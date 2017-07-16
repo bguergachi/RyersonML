@@ -9,11 +9,16 @@ hm_epochs = 10
 n_classes = 10
 batch_size = 128
 
+chunk_size = 28
+n_chunks = 28
+rnn_size = 128
+
+
 x = tf.placeholder('float', [None, 784])
 y = tf.placeholder('float')
 
 
-def neural_network_model(data):
+def recurrent_nural_network(data):
     hidden_1_layer = {'weights': tf.Variable(tf.random_normal([784, n_nodes_hl1])),
                       'biases': tf.Variable(tf.random_normal([n_nodes_hl1]))}
 
