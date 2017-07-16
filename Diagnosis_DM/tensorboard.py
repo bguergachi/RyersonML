@@ -41,3 +41,4 @@ print('Inputs: {}'.format(new_samples))
 print ('Predictions: {}'.format(y))
 
 
+file_writer = tf.summary.FileWriter('diabetes_model', sess.graph)
